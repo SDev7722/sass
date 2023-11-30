@@ -18,7 +18,7 @@
     max-width: 900px;
   }
 }
-@media all and (width < 1000x) {
+@media all and (width < 1000px) {
   .section__content {
     max-width: 700px;
   }
