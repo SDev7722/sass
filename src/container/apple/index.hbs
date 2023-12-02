@@ -53,6 +53,56 @@
       </div>
     </section>
   {{/with}}
+
+  {{#with iphone}}
+    <section class='product product-big product--iphone product--light product--top'>
+      <div class='product__content'>
+        <h1 class='product__title'>{{title}}</h1>
+        <p class='product__description'>{{descriptions}}</p>
+        <div class='product__action'>
+          {{#with link}}
+            {{#each text}}
+              <a href='{{../link}}' class='product__link'>{{this}}</a>
+            {{/each}}
+          {{/with}}
+        </div>
+      </div>
+    </section>
+  {{/with}}
+
+  <div class="section__double">
+	<div>
+		{{#with trade_in}}
+			<section class='product product-small product--trade-in product--light product--top'>
+			<div class='product__content'>
+				<h1 class='product__title'>{{title}}</h1>
+				<p class='product__description'>{{descriptions}}</p>
+				<div class='product__action'>
+				{{#with link}}
+					<a href='{{link}}' class='product__link'>{{text}}</a>
+				{{/with}}
+				</div>
+			</div>
+			</section>
+		{{/with}}
+	</div>
+	<div>
+		{{#with conference}}
+			<section class='product product-small product--conference product--dark product--bottom'>
+			<div class='product__content'>
+				<h1 class='product__title'>{{title}}</h1>
+				<p class='product__description'>{{descriptions}}</p>
+				<div class='product__action'>
+				{{#with link}}
+					<a href='{{link}}' class='product__link'>{{text}}</a>
+				{{/with}}
+				</div>
+			</div>
+			</section>
+		{{/with}}
+	</div>
+  </div>
+
 </div>
 
 {{! 
