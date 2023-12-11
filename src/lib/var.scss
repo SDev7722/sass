@@ -2,6 +2,7 @@ $colorMap: (
 	background: #F5F5F7,
 	backgroundDark: hsl(0, 0%, 27%),
 	whiteLight: #DADADA,
+	white: #FFFFFF,
 	fontDark: #1D1D1F,
 	primary: #0066CC
 );
@@ -14,6 +15,7 @@ $colorMap: (
 
 $sizeMap: (
 	default: 16px,
+	medium: 14px,
 	small: 12px
 );
 
@@ -22,10 +24,11 @@ $sizeMap: (
 }
 
 $screenMap: (
-	desctop: 1440px,
+	desktop: 1440px,
 	laptop: 1260px,
 	tablet: 1000px,
-	mobile: 620px
+	mobile: 620px,
+	mobileSmall: 470px
 );
 
 @function screen ($key: 'default') {

@@ -8,10 +8,11 @@
 }
 
 $contentSizeMap: (
-	desctop: 1100px,
+	desktop: 1100px,
 	laptop: 900px,
 	tablet: 700px,
-	mobile: 500px
+	mobile: 500px,
+	mobileSmall: 300px
 );
 
 .section__content {
@@ -31,5 +32,45 @@ $contentSizeMap: (
 
 	@media all and (width < var.screen('laptop')) {
 		grid-template-columns: 1fr;
+	}
+}
+
+.section__footer {
+	display: grid;
+	grid-template-columns: repeat(6, 180px);
+	justify-items: center;
+	padding-left: 180px;
+	padding-right: 180px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	gap: 20px;
+
+	@media all and (width < var.screen('laptop')) {
+		grid-template-columns: repeat(5, 150px);
+		gap: 32px;
+	}
+
+	@media all and (width < var.screen('tablet')) {
+		grid-template-columns: repeat(3, 150px);
+		gap: 32px;
+
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	@media all and (width < var.screen('mobile')) {
+		grid-template-columns: repeat(2, 150px);
+		gap: 32px;
+
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	@media all and (width < var.screen('mobileSmall')) {
+		grid-template-columns: 150px;
+		gap: 32px;
+
+		padding-left: 40px;
+		padding-right: 40px;
 	}
 }
