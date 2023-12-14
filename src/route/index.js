@@ -98,7 +98,7 @@ router.get('/apple', function (req, res) {
       title: 'Ipad',
       descriptions: 'Lovable. Drawable. Magical.',
       link: {
-        text: ['Learn more', 'Buy'],
+        text: ['Learn more', ' Buy'],
         link: 'www.example.com/ipad',
       },
     },

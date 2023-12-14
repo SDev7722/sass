@@ -18,6 +18,20 @@
 	justify-content: space-between;
 }
 
+.header__content-2 {
+	@extend .section__content;
+
+	display: flex;
+	padding: s.space(4) 0;
+	justify-content: space-between;
+
+	@media all and (width < s.screen('tablet')) {
+		flex-direction: column;
+		align-items: center;
+		gap: 16px;
+	}
+}
+
 .header__block {
 	display: flex;
 	gap: s.space(8);
@@ -60,6 +74,7 @@
 	color: s.color('fontDark');
 
 	font-size: s.size('medium');
+	font-weight: 120%;
 }
 
 .product__description {
@@ -175,6 +190,431 @@ $productImage: (
 	.product--#{$class} {
 		background-image: url(#{$url});
 		background-color: $color;
+	}
+}
+
+.product--iphone-pro {
+	@media all and (width < s.screen('laptop')) {
+		background-size: 165%;
+	}
+
+	@media all and (width < s.screen('laptop-2')) {
+		background-size: 185%;
+	}
+
+	@media all and (width < s.screen('tablet')) {
+		background-size: 120%;
+	}
+
+	@media all and (width < s.screen('tablet-2')) {
+		background-size: 135%;
+	}
+
+	@media all and (width < s.screen('tablet-3')) {
+		background-size: 150%;
+	}
+
+	@media all and (width < s.screen('tablet-4')) {
+		background-size: 170%;
+	}
+
+	@media all and (width < s.screen('mobile')) {
+		background-size: 190%;
+	}
+
+	@media all and (width < s.screen('mobile-2')) {
+		background-size: 180%;
+	}
+
+	@media all and (width < s.screen('mobileSmall')) {
+		background-size: 180%;
+		background-position: bottom;
+	}
+
+	@media all and (width < s.screen('mobileSmall-2')) {
+		background-size: 180%;
+	}
+}
+
+.product--iphone {
+	@media all and (width < s.screen('laptop')) {
+		background-size: 165%;
+	}
+
+	@media all and (width < s.screen('laptop-2')) {
+		background-size: 190%;
+	}
+
+	@media all and (width < s.screen('tablet')) {
+		background-size: 120%;
+	}
+
+	@media all and (width < s.screen('tablet-2')) {
+		background-size: 135%;
+	}
+
+	@media all and (width < s.screen('tablet-3')) {
+		background-size: 150%;
+	}
+
+	@media all and (width < s.screen('tablet-4')) {
+		background-size: 170%;
+	}
+
+	@media all and (width < s.screen('mobile')) {
+		background-size: 190%;
+	}
+
+	@media all and (width < s.screen('mobile-2')) {
+		background-size: 220%;
+	}
+
+	@media all and (width < s.screen('mobileSmall')) {
+		background-size: 215%;
+		background-position: bottom;
+	}
+
+	@media all and (width < s.screen('mobileSmall-2')) {
+		background-size: 220%;
+	}
+}
+
+.product--iwatch {
+	@media all and (width < s.screen('laptop')) {
+		background-size: 165%;
+	}
+
+	@media all and (width < s.screen('laptop-2')) {
+		background-size: 175%;
+	}
+
+	@media all and (width < s.screen('tablet')) {
+		background-size: 110%;
+	}
+
+	@media all and (width < s.screen('tablet-2')) {
+		background-size: 120%;
+	}
+
+	@media all and (width < s.screen('tablet-3')) {
+		background-size: 140%;
+	}
+
+	@media all and (width < s.screen('tablet-4')) {
+		background-size: 160%;
+	}
+
+	@media all and (width < s.screen('mobile')) {
+		background-size: 180%;
+	}
+
+	@media all and (width < s.screen('mobile-2')) {
+		background-size: 215%;
+	}
+
+	@media all and (width < s.screen('mobileSmall')) {
+		background-size: 230%;
+		background-position: bottom;
+	}
+
+	@media all and (width < s.screen('mobileSmall-2')) {
+		background-size: 220%;
+	}
+}
+
+.product--trade-in {
+	background-size: 110%;
+
+	@media all and (width < s.screen('laptop')) {
+		background-size: 100%;
+		background-position: top;
+	}
+
+	@media all and (width < s.screen('laptop-2')) {
+		background-size: 100%;
+	}
+
+	@media all and (width < s.screen('tablet')) {
+		background-size: 100%;
+		background-position: top;
+	}
+
+	@media all and (width < s.screen('tablet-2')) {
+		background-size: 120%;
+	}
+
+	@media all and (width < s.screen('tablet-3')) {
+		background-size: 125%;
+	}
+
+	@media all and (width < s.screen('tablet-4')) {
+		background-size: 140%;
+		background-position: top;
+	}
+
+	@media all and (width < s.screen('mobile')) {
+		background-size: 135%;
+		background-position: bottom;
+
+	}
+
+	@media all and (width < s.screen('mobile-2')) {
+		background-size: 165%;
+	}
+
+	@media all and (width < s.screen('mobileSmall')) {
+		background-size: 180%;
+		background-position: bottom;
+	}
+
+	@media all and (width < s.screen('mobileSmall-2')) {
+		background-size: 110%;
+		background-position: bottom;
+	}
+}
+
+.product--conference {
+	@media all and (width < s.screen('laptop')) {
+		background-size: 90%;
+	}
+
+	@media all and (width < s.screen('laptop-2')) {
+		background-size: 100%;
+	}
+
+	@media all and (width < s.screen('tablet')) {
+		background-size: 95%;
+	}
+
+	@media all and (width < s.screen('tablet-2')) {
+		background-size: 105%;
+	}
+
+	@media all and (width < s.screen('tablet-3')) {
+		background-size: 120%;
+	}
+
+	@media all and (width < s.screen('tablet-4')) {
+		background-size: 135%;
+	}
+
+	@media all and (width < s.screen('mobile')) {
+		background-size: 155%;
+	}
+
+	@media all and (width < s.screen('mobile-2')) {
+		background-size: 175%;
+	}
+
+	@media all and (width < s.screen('mobileSmall')) {
+		background-size: 175%;
+		background-position: top;
+	}
+
+	@media all and (width < s.screen('mobileSmall-2')) {
+		background-size: 160%;
+	}
+}
+
+.product--ipad {
+	background-size: 90%;
+
+	@media all and (width < s.screen('laptop')) {
+		background-size: 70%;
+	}
+
+	@media all and (width < s.screen('laptop-2')) {
+		background-size: 80%;
+	}
+
+	@media all and (width < s.screen('tablet')) {
+		background-size: 70%;
+	}
+
+	@media all and (width < s.screen('tablet-2')) {
+		background-size: 75%;
+	}
+
+	@media all and (width < s.screen('tablet-3')) {
+		background-size: 90%;
+	}
+
+	@media all and (width < s.screen('tablet-4')) {
+		background-size: 100%;
+	}
+
+	@media all and (width < s.screen('mobile')) {
+		background-size: 115%;
+	}
+
+	@media all and (width < s.screen('mobile-2')) {
+		background-size: 145%;
+	}
+
+	@media all and (width < s.screen('mobileSmall')) {
+		background-size: 155%;
+	}
+
+	@media all and (width < s.screen('mobileSmall-2')) {
+		background-size: 180%;
+	}
+}
+
+.product--business {
+	@media all and (width < s.screen('laptop')) {
+		background-size: 90%;
+
+		.product__content {
+			gap: s.space(1);
+		}
+	}
+
+	@media all and (width < s.screen('laptop-2')) {
+		background-size: 96%;
+	}
+
+	@media all and (width < s.screen('tablet')) {
+		background-size: 95%;
+
+		.product__content {
+			gap: s.space(1);
+		}
+	}
+
+	@media all and (width < s.screen('tablet-2')) {
+		background-size: 105%;
+
+		.product__content {
+			gap: s.space(1);
+		}
+	}
+
+	@media all and (width < s.screen('tablet-3')) {
+		background-size: 120%;
+
+		.product__content {
+			gap: s.space(1);
+		}
+	}
+
+	@media all and (width < s.screen('tablet-4')) {
+		background-size: 135%;
+
+		.product__content {
+			gap: s.space(1);
+		}
+	}
+
+	@media all and (width < s.screen('mobile')) {
+		background-size: 160%;
+
+		.product__content {
+			gap: s.space(1);
+		}
+	}
+
+	@media all and (width < s.screen('mobile-2')) {
+		background-size: 165%;
+
+		.product__content {
+			gap: s.space(1);
+		}
+	}
+
+	@media all and (width < s.screen('mobileSmall')) {
+		background-size: 155%;
+	}
+
+	@media all and (width < s.screen('mobileSmall-2')) {
+		background-size: 170%;
+
+		.product__content {
+			gap: s.space(1);
+		}
+	}
+}
+
+.product--gift {
+	@media all and (width < s.screen('laptop')) {
+		background-size: 90%;
+	}
+
+	@media all and (width < s.screen('laptop-2')) {
+		background-size: 100%;
+	}
+
+	@media all and (width < s.screen('tablet')) {
+		background-size: 90%;
+	}
+
+	@media all and (width < s.screen('tablet-2')) {
+		background-size: 95%;
+	}
+
+	@media all and (width < s.screen('tablet-3')) {
+		background-size: 110%;
+	}
+
+	@media all and (width < s.screen('tablet-4')) {
+		background-size: 110%;
+	}
+
+	@media all and (width < s.screen('mobile')) {
+		background-size: 130%;
+	}
+
+	@media all and (width < s.screen('mobile-2')) {
+		background-size: 155%;
+	}
+
+	@media all and (width < s.screen('mobileSmall')) {
+		background-size: 160%;
+	}
+
+	@media all and (width < s.screen('mobileSmall-2')) {
+		background-size: 165%;
+	}
+}
+
+.product--card {
+	@media all and (width < s.screen('laptop')) {
+		background-size: 80%;
+	}
+
+	@media all and (width < s.screen('laptop-2')) {
+		background-size: 90%;
+	}
+
+	@media all and (width < s.screen('tablet')) {
+		background-size: 80%;
+	}
+
+	@media all and (width < s.screen('tablet-1')) {
+		background-size: 90%;
+	}
+
+	@media all and (width < s.screen('tablet-2')) {
+		background-size: 100%;
+	}
+
+	@media all and (width < s.screen('tablet-3')) {
+		background-size: 120%;
+	}
+
+	@media all and (width < s.screen('mobile')) {
+		background-size: 140%;
+	}
+
+	@media all and (width < s.screen('mobile-2')) {
+		background-size: 165%;
+	}
+
+	@media all and (width < s.screen('mobileSmall')) {
+		background-size: 170%;
+	}
+
+	@media all and (width < s.screen('mobileSmall-2')) {
+		background-size: 200%;
 	}
 }
 

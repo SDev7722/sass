@@ -26,9 +26,15 @@ $sizeMap: (
 $screenMap: (
 	desktop: 1440px,
 	laptop: 1260px,
+	laptop-2: 1100px,
 	tablet: 1000px,
+	tablet-2: 900px,
+	tablet-3: 800px,
+	tablet-4: 700px,
 	mobile: 620px,
-	mobileSmall: 470px
+	mobile-2: 500px,
+	mobileSmall: 470px,
+	mobileSmall-2:400px
 );
 
 @function screen ($key: 'default') {
