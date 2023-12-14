@@ -824,17 +824,17 @@
 }
 @media all and (width < 900px) {
   .product--card {
-    background-size: 100%;
+    background-size: 90%;
   }
 }
 @media all and (width < 800px) {
   .product--card {
-    background-size: 120%;
+    background-size: 100%;
   }
 }
 @media all and (width < 620px) {
   .product--card {
-    background-size: 140%;
+    background-size: 135%;
   }
 }
 @media all and (width < 500px) {
