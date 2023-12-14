@@ -58,6 +58,43 @@
 	font-size: s.size('medium');
 }
 
+// Nav adaptation
+@media all and (width >=s.screen('mobile-2')) {
+	.mainMenyBtn {
+		display: none;
+	}
+}
+
+@media all and (width < s.screen('mobile-2')) {
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown__child {
+		position: fixed;
+		padding: 12px;
+		top: 32px;
+		display: none;
+		background-color: s.color('backgroundDark-2');
+		min-width: 170px;
+		border: 1px solid s.color('whiteLight');
+		border-radius: 12px;
+		transition: 0.7s;
+	}
+
+	.dropdown__child a {
+		padding: 12px;
+		display: block;
+	}
+
+	.dropdown:hover .dropdown__child {
+		display: block;
+	}
+}
+
+// ---------------
+
 .product__content {
 	display: grid;
 	gap: s.space(5);

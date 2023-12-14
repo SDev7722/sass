@@ -7,20 +7,25 @@
   <div class='header'>
     {{#with header}}
       <header class='header__content'>
-        <div class='header__block'>
+        <div class='header__block '>
           <img
             src='/svg/apple.svg'
             alt='Apple'
             class='header__icon'
           />
-          <nav class='header__block'>
-            {{#each links}}
-              <a
-                href='{{url}}'
-                class='header__link'
-              >{{text}}</a>
-            {{/each}}
-          </nav>
+
+		<div class="dropdown">
+			<button class="header__link mainMenyBtn">Products</button>
+			<nav class='header__block dropdown__child'>
+				{{#each links}}
+				<a
+					href='{{url}}'
+					class='header__link'
+				>{{text}}</a>
+				{{/each}}
+			</nav>
+		</div>
+
         </div>
         <div class='header__block'>
           <img

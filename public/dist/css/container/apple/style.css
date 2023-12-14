@@ -150,6 +150,35 @@
   opacity: 0.3;
 }
 
+@media all and (width >= 500px) {
+  .mainMenyBtn {
+    display: none;
+  }
+}
+@media all and (width < 500px) {
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown__child {
+    position: fixed;
+    padding: 12px;
+    top: 32px;
+    display: none;
+    background-color: #454545;
+    min-width: 170px;
+    border: 1px solid #DADADA;
+    border-radius: 12px;
+    transition: 0.7s;
+  }
+  .dropdown__child a {
+    padding: 12px;
+    display: block;
+  }
+  .dropdown:hover .dropdown__child {
+    display: block;
+  }
+}
 .product__content {
   display: grid;
   gap: 20px;
