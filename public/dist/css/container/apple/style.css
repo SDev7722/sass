@@ -1,0 +1,889 @@
+.section, .header, .header-2, .product, .footer {
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.section__content, .header__content, .header__content-2 {
+  max-width: 1200px;
+  width: 100%;
+}
+@media all and (width < 1440px) {
+  .section__content, .header__content, .header__content-2 {
+    max-width: 1100px;
+  }
+}
+@media all and (width < 1260px) {
+  .section__content, .header__content, .header__content-2 {
+    max-width: 900px;
+  }
+}
+@media all and (width < 1000px) {
+  .section__content, .header__content, .header__content-2 {
+    max-width: 700px;
+  }
+}
+@media all and (width < 620px) {
+  .section__content, .header__content, .header__content-2 {
+    max-width: 500px;
+  }
+}
+@media all and (width < 470px) {
+  .section__content, .header__content, .header__content-2 {
+    max-width: 300px;
+  }
+}
+.section__double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media all and (width < 1260px) {
+  .section__double {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section__footer {
+  display: grid;
+  grid-template-columns: repeat(6, 180px);
+  justify-items: center;
+  padding-left: 180px;
+  padding-right: 180px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  gap: 20px;
+}
+@media all and (width < 1260px) {
+  .section__footer {
+    grid-template-columns: repeat(5, 150px);
+    gap: 32px;
+  }
+}
+@media all and (width < 1000px) {
+  .section__footer {
+    grid-template-columns: repeat(3, 150px);
+    gap: 32px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media all and (width < 620px) {
+  .section__footer {
+    grid-template-columns: repeat(2, 150px);
+    gap: 32px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media all and (width < 470px) {
+  .section__footer {
+    grid-template-columns: 150px;
+    gap: 32px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.header {
+  background-color: hsl(0, 0%, 27%);
+}
+
+.header__content {
+  display: flex;
+  padding: 16px 0;
+  justify-content: space-between;
+}
+
+.header__content-2 {
+  display: flex;
+  padding: 16px 0;
+  justify-content: space-between;
+}
+@media all and (width < 1000px) {
+  .header__content-2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.header__block {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.header__icon {
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.header__icon:hover {
+  opacity: 0.7;
+}
+.header__icon:active {
+  opacity: 0.3;
+}
+
+.header__link {
+  color: #DADADA;
+  transition: opacity 0.7s;
+  cursor: pointer;
+  font-size: 12px;
+}
+.header__link:hover {
+  opacity: 0.7;
+}
+.header__link:active {
+  opacity: 0.3;
+}
+
+.header__link-2 {
+  color: #0066CC;
+  transition: opacity 0.7s;
+  cursor: pointer;
+  font-size: 14px;
+}
+.header__link-2:hover {
+  opacity: 0.7;
+}
+.header__link-2:active {
+  opacity: 0.3;
+}
+
+@media all and (width >= 500px) {
+  .mainMenyBtn {
+    display: none;
+  }
+}
+@media all and (width < 500px) {
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown__child {
+    position: fixed;
+    padding: 12px;
+    top: 32px;
+    display: none;
+    background-color: #454545;
+    min-width: 170px;
+    border: 1px solid #DADADA;
+    border-radius: 12px;
+    transition: 0.7s;
+  }
+  .dropdown__child a {
+    padding: 12px;
+    display: block;
+  }
+  .dropdown:hover .dropdown__child {
+    display: block;
+  }
+}
+.product__content {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+  align-content: center;
+}
+
+.product__title {
+  font-size: 56px;
+  font-weight: 600;
+}
+
+.colorSize__title {
+  color: #1D1D1F;
+  font-size: 14px;
+  font-weight: 120%;
+}
+
+.product__description {
+  font-size: 28px;
+}
+
+.product__action {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.product__action:hover {
+  opacity: 0.7;
+}
+.product__action:active {
+  opacity: 0.3;
+}
+
+.product__link {
+  color: #0066CC;
+  position: relative;
+  padding-right: 15px;
+}
+.product__link::after {
+  display: block;
+  content: "";
+  width: 7px;
+  height: 14px;
+  background-image: url("/svg/arrowAction.svg");
+  position: absolute;
+  right: 0;
+  top: calc(50% - 8px);
+}
+
+.product__link-2 {
+  color: #0066CC;
+  position: relative;
+  padding-right: 15px;
+}
+.product__link-2::after {
+  display: block;
+  content: "";
+  width: 6px;
+  height: 14px;
+  background-image: url("/svg/arrowActionB.svg");
+  position: absolute;
+  right: 0;
+  top: calc(50% - 8px);
+}
+
+.product {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.product-big {
+  max-height: 700px;
+  height: 100vh;
+  background-size: cover;
+}
+@media all and (width < 1000px) {
+  .product-big {
+    background-size: 150%;
+    max-height: 500px;
+  }
+}
+
+.product-small {
+  max-height: 580px;
+  height: 100vh;
+  background-size: cover;
+}
+.product-small .product__title {
+  font-size: 40px;
+}
+.product-small .product__description {
+  font-size: 20px;
+}
+@media all and (width < 1000px) {
+  .product-small {
+    background-size: 150%;
+    max-height: 500px;
+  }
+}
+
+.product--dark {
+  background-color: #000;
+}
+.product--dark .product__title,
+.product--dark .product__description {
+  color: #F5F5F7;
+}
+
+.product--top .product__content {
+  align-content: flex-start;
+}
+
+.product--bottom .product__content {
+  align-content: flex-end;
+}
+
+.product--light {
+  background-color: #fff;
+}
+.product--light .product__title,
+.product--light .product__description {
+  color: #1D1D1F;
+}
+
+.product--iphone-pro {
+  background-image: url(/img/iphone_pro.png);
+  background-color: #000;
+}
+
+.product--iphone {
+  background-image: url(/img/iphone.png);
+  background-color: #fafafa;
+}
+
+.product--iwatch {
+  background-image: url(/img/iwatch.png);
+  background-color: #000;
+}
+
+.product--trade-in {
+  background-image: url(/img/trade_in.png);
+  background-color: #fbfbfd;
+}
+
+.product--conference {
+  background-image: url(/img/conference.png);
+  background-color: #000;
+}
+
+.product--ipad {
+  background-image: url(/img/ipad.png);
+  background-color: #fbfbfd;
+}
+
+.product--business {
+  background-image: url(/img/business.png);
+  background-color: #000;
+}
+
+.product--gift {
+  background-image: url(/img/gift.png);
+  background-color: #fbfbfd;
+}
+
+.product--card {
+  background-image: url(/img/card.png);
+  background-color: #fbfbfd;
+}
+
+@media all and (width < 1260px) {
+  .product--iphone-pro {
+    background-size: 165%;
+  }
+}
+@media all and (width < 1100px) {
+  .product--iphone-pro {
+    background-size: 185%;
+  }
+}
+@media all and (width < 1000px) {
+  .product--iphone-pro {
+    background-size: 120%;
+  }
+}
+@media all and (width < 900px) {
+  .product--iphone-pro {
+    background-size: 135%;
+  }
+}
+@media all and (width < 800px) {
+  .product--iphone-pro {
+    background-size: 150%;
+  }
+}
+@media all and (width < 700px) {
+  .product--iphone-pro {
+    background-size: 170%;
+  }
+}
+@media all and (width < 620px) {
+  .product--iphone-pro {
+    background-size: 190%;
+  }
+}
+@media all and (width < 500px) {
+  .product--iphone-pro {
+    background-size: 180%;
+  }
+}
+@media all and (width < 470px) {
+  .product--iphone-pro {
+    background-size: 180%;
+    background-position: bottom;
+  }
+}
+@media all and (width < 400px) {
+  .product--iphone-pro {
+    background-size: 180%;
+  }
+}
+
+@media all and (width < 1260px) {
+  .product--iphone {
+    background-size: 165%;
+  }
+}
+@media all and (width < 1100px) {
+  .product--iphone {
+    background-size: 190%;
+  }
+}
+@media all and (width < 1000px) {
+  .product--iphone {
+    background-size: 120%;
+  }
+}
+@media all and (width < 900px) {
+  .product--iphone {
+    background-size: 135%;
+  }
+}
+@media all and (width < 800px) {
+  .product--iphone {
+    background-size: 150%;
+  }
+}
+@media all and (width < 700px) {
+  .product--iphone {
+    background-size: 170%;
+  }
+}
+@media all and (width < 620px) {
+  .product--iphone {
+    background-size: 190%;
+  }
+}
+@media all and (width < 500px) {
+  .product--iphone {
+    background-size: 220%;
+  }
+}
+@media all and (width < 470px) {
+  .product--iphone {
+    background-size: 215%;
+    background-position: bottom;
+  }
+}
+@media all and (width < 400px) {
+  .product--iphone {
+    background-size: 220%;
+  }
+}
+
+@media all and (width < 1260px) {
+  .product--iwatch {
+    background-size: 165%;
+  }
+}
+@media all and (width < 1100px) {
+  .product--iwatch {
+    background-size: 175%;
+  }
+}
+@media all and (width < 1000px) {
+  .product--iwatch {
+    background-size: 110%;
+  }
+}
+@media all and (width < 900px) {
+  .product--iwatch {
+    background-size: 120%;
+  }
+}
+@media all and (width < 800px) {
+  .product--iwatch {
+    background-size: 140%;
+  }
+}
+@media all and (width < 700px) {
+  .product--iwatch {
+    background-size: 160%;
+  }
+}
+@media all and (width < 620px) {
+  .product--iwatch {
+    background-size: 180%;
+  }
+}
+@media all and (width < 500px) {
+  .product--iwatch {
+    background-size: 215%;
+  }
+}
+@media all and (width < 470px) {
+  .product--iwatch {
+    background-size: 230%;
+    background-position: bottom;
+  }
+}
+@media all and (width < 400px) {
+  .product--iwatch {
+    background-size: 220%;
+  }
+}
+
+.product--trade-in {
+  background-size: 110%;
+}
+@media all and (width < 1260px) {
+  .product--trade-in {
+    background-size: 100%;
+    background-position: top;
+  }
+}
+@media all and (width < 1100px) {
+  .product--trade-in {
+    background-size: 100%;
+  }
+}
+@media all and (width < 1000px) {
+  .product--trade-in {
+    background-size: 100%;
+    background-position: top;
+  }
+}
+@media all and (width < 900px) {
+  .product--trade-in {
+    background-size: 120%;
+  }
+}
+@media all and (width < 800px) {
+  .product--trade-in {
+    background-size: 125%;
+  }
+}
+@media all and (width < 700px) {
+  .product--trade-in {
+    background-size: 140%;
+    background-position: top;
+  }
+}
+@media all and (width < 620px) {
+  .product--trade-in {
+    background-size: 135%;
+    background-position: bottom;
+  }
+}
+@media all and (width < 500px) {
+  .product--trade-in {
+    background-size: 165%;
+  }
+}
+@media all and (width < 470px) {
+  .product--trade-in {
+    background-size: 180%;
+    background-position: bottom;
+  }
+}
+@media all and (width < 400px) {
+  .product--trade-in {
+    background-size: 110%;
+    background-position: bottom;
+  }
+}
+
+@media all and (width < 1260px) {
+  .product--conference {
+    background-size: 90%;
+  }
+}
+@media all and (width < 1100px) {
+  .product--conference {
+    background-size: 100%;
+  }
+}
+@media all and (width < 1000px) {
+  .product--conference {
+    background-size: 95%;
+  }
+}
+@media all and (width < 900px) {
+  .product--conference {
+    background-size: 105%;
+  }
+}
+@media all and (width < 800px) {
+  .product--conference {
+    background-size: 120%;
+  }
+}
+@media all and (width < 700px) {
+  .product--conference {
+    background-size: 135%;
+  }
+}
+@media all and (width < 620px) {
+  .product--conference {
+    background-size: 155%;
+  }
+}
+@media all and (width < 500px) {
+  .product--conference {
+    background-size: 175%;
+  }
+}
+@media all and (width < 470px) {
+  .product--conference {
+    background-size: 175%;
+    background-position: top;
+  }
+}
+@media all and (width < 400px) {
+  .product--conference {
+    background-size: 160%;
+  }
+}
+
+.product--ipad {
+  background-size: 90%;
+}
+@media all and (width < 1260px) {
+  .product--ipad {
+    background-size: 70%;
+  }
+}
+@media all and (width < 1100px) {
+  .product--ipad {
+    background-size: 80%;
+  }
+}
+@media all and (width < 1000px) {
+  .product--ipad {
+    background-size: 70%;
+  }
+}
+@media all and (width < 900px) {
+  .product--ipad {
+    background-size: 75%;
+  }
+}
+@media all and (width < 800px) {
+  .product--ipad {
+    background-size: 90%;
+  }
+}
+@media all and (width < 700px) {
+  .product--ipad {
+    background-size: 100%;
+  }
+}
+@media all and (width < 620px) {
+  .product--ipad {
+    background-size: 115%;
+  }
+}
+@media all and (width < 500px) {
+  .product--ipad {
+    background-size: 145%;
+  }
+}
+@media all and (width < 470px) {
+  .product--ipad {
+    background-size: 155%;
+  }
+}
+@media all and (width < 400px) {
+  .product--ipad {
+    background-size: 180%;
+  }
+}
+
+@media all and (width < 1260px) {
+  .product--business {
+    background-size: 90%;
+  }
+  .product--business .product__content {
+    gap: 4px;
+  }
+}
+@media all and (width < 1100px) {
+  .product--business {
+    background-size: 96%;
+  }
+}
+@media all and (width < 1000px) {
+  .product--business {
+    background-size: 95%;
+  }
+  .product--business .product__content {
+    gap: 4px;
+  }
+}
+@media all and (width < 900px) {
+  .product--business {
+    background-size: 105%;
+  }
+  .product--business .product__content {
+    gap: 4px;
+  }
+}
+@media all and (width < 800px) {
+  .product--business {
+    background-size: 120%;
+  }
+  .product--business .product__content {
+    gap: 4px;
+  }
+}
+@media all and (width < 700px) {
+  .product--business {
+    background-size: 135%;
+  }
+  .product--business .product__content {
+    gap: 4px;
+  }
+}
+@media all and (width < 620px) {
+  .product--business {
+    background-size: 160%;
+  }
+  .product--business .product__content {
+    gap: 4px;
+  }
+}
+@media all and (width < 500px) {
+  .product--business {
+    background-size: 165%;
+  }
+  .product--business .product__content {
+    gap: 4px;
+  }
+}
+@media all and (width < 470px) {
+  .product--business {
+    background-size: 155%;
+  }
+}
+@media all and (width < 400px) {
+  .product--business {
+    background-size: 170%;
+  }
+  .product--business .product__content {
+    gap: 4px;
+  }
+}
+
+@media all and (width < 1260px) {
+  .product--gift {
+    background-size: 90%;
+  }
+}
+@media all and (width < 1100px) {
+  .product--gift {
+    background-size: 100%;
+  }
+}
+@media all and (width < 1000px) {
+  .product--gift {
+    background-size: 90%;
+  }
+}
+@media all and (width < 900px) {
+  .product--gift {
+    background-size: 95%;
+  }
+}
+@media all and (width < 800px) {
+  .product--gift {
+    background-size: 110%;
+  }
+}
+@media all and (width < 700px) {
+  .product--gift {
+    background-size: 110%;
+  }
+}
+@media all and (width < 620px) {
+  .product--gift {
+    background-size: 130%;
+  }
+}
+@media all and (width < 500px) {
+  .product--gift {
+    background-size: 155%;
+  }
+}
+@media all and (width < 470px) {
+  .product--gift {
+    background-size: 160%;
+  }
+}
+@media all and (width < 400px) {
+  .product--gift {
+    background-size: 165%;
+  }
+}
+
+@media all and (width < 1260px) {
+  .product--card {
+    background-size: 80%;
+  }
+}
+@media all and (width < 1100px) {
+  .product--card {
+    background-size: 90%;
+  }
+}
+@media all and (width < 1000px) {
+  .product--card {
+    background-size: 80%;
+  }
+}
+@media all and (width < ) {
+  .product--card {
+    background-size: 90%;
+  }
+}
+@media all and (width < 900px) {
+  .product--card {
+    background-size: 90%;
+  }
+}
+@media all and (width < 800px) {
+  .product--card {
+    background-size: 100%;
+  }
+}
+@media all and (width < 620px) {
+  .product--card {
+    background-size: 135%;
+  }
+}
+@media all and (width < 500px) {
+  .product--card {
+    background-size: 165%;
+  }
+}
+@media all and (width < 470px) {
+  .product--card {
+    background-size: 170%;
+  }
+}
+@media all and (width < 400px) {
+  .product--card {
+    background-size: 200%;
+  }
+}
+
+.footer {
+  background-color: #F5F5F7;
+  justify-items: normal;
+}
+
+.footer__link {
+  display: grid;
+  font-weight: 400;
+  line-height: 100%;
+  padding-bottom: 12px;
+  color: #424245;
+  transition: opacity 0.7s;
+  cursor: pointer;
+  font-size: 12px;
+}
+.footer__link:hover {
+  opacity: 0.7;
+}
+.footer__link:active {
+  opacity: 0.3;
+}
+
+.footer__link:last-of-type {
+  padding-bottom: unset;
+}
+
+.footer__title {
+  font-size: 12px;
+  font-weight: 600;
+  padding-bottom: 16px;
+  color: #1d1d1f;
+}
+
+/*# sourceMappingURL=style.css.map */

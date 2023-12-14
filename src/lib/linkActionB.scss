@@ -1,0 +1,19 @@
+@use './var.scss';
+@use './space.scss';
+
+@mixin linkActionB {
+	color: var.color('primary');
+	position: relative;
+	padding-right: calc(space.space(2) + 7px);
+
+	&::after {
+		display: block;
+		content: '';
+		width: 6px;
+		height: 14px;
+		background-image: url('/svg/arrowActionB.svg');
+		position: absolute;
+		right: 0;
+		top: calc(50% - 8px);
+	}
+}
